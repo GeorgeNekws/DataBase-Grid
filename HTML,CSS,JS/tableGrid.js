@@ -1,5 +1,3 @@
-
-
 function createGrid(){
 	var rows = 100;
 	var columns = 100;
