@@ -1,0 +1,18 @@
+table, td {
+	border : 1px solid black;
+	border-collapse : collapse;
+}
+
+#table-grid	{
+	#width : 50%;
+	#height : 300px;
+}
+
+td	{
+	width: 3px;
+	height: 3px;
+}
+
+td : hover {
+	background-color : blue;
+}
