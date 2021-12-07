@@ -16,7 +16,7 @@ class tableGrid{
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@DESKTOP:1521:orcl","user","pwd");
 			
 			//step 3 Create the Statement object
-			CallableStatement cstmt = con.prepareCall("{? = call GET_CIRCLE(?,?)}");		//for calling an oracle function
+			CallableStatement cstmt = con.prepareCall("{? = call GET_CIRCLE(?,?)}");		//for calling an plsql function
 			cstmt.registerOutParameter(1,OracleTypes.CURSOR);
 			cstmt.setInt(2,4550);
 			cstmt.setInt(3,40);
