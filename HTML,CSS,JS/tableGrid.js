@@ -16,10 +16,6 @@ function createGrid(){
 			identifier++;
 		}
 	}
-	/*var c = document.getElementById("1");
-	console.log(c);
-	c.style.backgroundColor = "red";*/
-
 }
 
   
