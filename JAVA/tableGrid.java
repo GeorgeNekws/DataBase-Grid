@@ -13,7 +13,7 @@ class tableGrid{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
 			//step 2 Create the Connection object
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@DESKTOP-N40CCVJ:1521:orcl","GEO","a123");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@DESKTOP:1521:orcl","user","pwd");
 			
 			//step 3 Create the Statement object
 			CallableStatement cstmt = con.prepareCall("{? = call GET_CIRCLE(?,?)}");		//for calling a function
