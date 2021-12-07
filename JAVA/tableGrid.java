@@ -16,18 +16,18 @@ class tableGrid{
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@DESKTOP:1521:orcl","user","pwd");
 			
 			//step 3 Create the Statement object
-			CallableStatement cstmt = con.prepareCall("{? = call GET_CIRCLE(?,?)}");		//for calling a function
+			CallableStatement cstmt = con.prepareCall("{? = call GET_CIRCLE(?,?)}");		//for calling an oracle function
 			cstmt.registerOutParameter(1,OracleTypes.CURSOR);
 			cstmt.setInt(2,4550);
 			cstmt.setInt(3,40);
 			
-			CallableStatement cstmt2 = con.prepareCall("{? = call GET_CIRCLE_SIZE(?,?)}");		//for calling a function
+			CallableStatement cstmt2 = con.prepareCall("{? = call GET_CIRCLE_SIZE(?,?)}");		
 			cstmt2.registerOutParameter(1,OracleTypes.INTEGER);
 			cstmt2.setInt(2,4550);
 			cstmt2.setInt(3,40);
 			 
 			//step 4 Execute query
-			cstmt.executeUpdate();					//na dw poia einai h diafora tous
+			cstmt.executeUpdate();					
 			cstmt2.execute();
 			
 			int result = cstmt2.getInt(1);
